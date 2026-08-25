@@ -1,0 +1,50 @@
+project:
+  name: "Wellness with Bre"
+  defaultBranch: main
+agent:
+  model: composer-2.5
+  startingRef: main
+# Default strategy is cursor-only. Opt into local-first when a VPS control plane
+# and Mac worker are configured (see docs/02-architecture/LOCAL_FIRST_RUNTIME.md).
+agents:
+  implementation:
+    strategy: cursor-only
+    # strategy: local-first
+    primary:
+      worker: mac-m1-max
+      provider: ollama
+      model: qwen2.5-coder:7b
+    fallback:
+      provider: cursor-cloud
+      model: composer-2.5
+    policy:
+      max_local_attempts: 2
+      timeout_minutes: 35
+      require_changes: true
+      require_validation: true
+# controlPlane:
+#   url: https://seos.example.com
+commands:
+  build: "npm run build"
+  test: "npm run test:e2e"
+labels:
+  needsSpec: needs-spec
+  specAdded: spec-added
+  ready: ready
+  agentWorking: agent-working
+  prOpened: pr-opened
+  agentFailed: agent-failed
+  noAgent: no-agent
+  agentManual: agent-manual
+automation:
+  # Workflows honor GitHub Actions repo variables (default on):
+  #   AGENT_AUTO_SPEC_ENABLED, AGENT_AUTO_READY_ENABLED
+  # Set either variable to "false" to disable that stage.
+  autoSpecOnOpen: true
+  autoReadyAfterSpec: true
+prompt:
+  postImplementReminders: |
+    Open a PR with `Fixes #{N}` in the body — leave it as a **draft**.
+    UI changes REQUIRE screenshots committed under `artifacts/issue-{N}/` and linked in the issue completion comment.
+    Update labels: remove `agent-working`, add `pr-opened` when the PR is open.
+    You MUST post the issue completion comment before stopping. Do not stop right after opening the PR.
