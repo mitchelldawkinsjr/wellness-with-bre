@@ -36,3 +36,14 @@ This is a **client-side SPA**. Document your state management and API client pat
 
 - New features should follow the same layering as neighboring code
 - One issue = one focused change set
+
+### UI
+
+Visual tokens, type, and component shapes live in `new_design/high_voltage_fitness/DESIGN.md`. Follow that file for color, type, spacing, and components.
+
+- Optimize each screen for repeated use during a workout: fewer taps to the next set, remember the last schedule and log, and no ceremony the user must dismiss every session.
+- Do not add a control that is not part of starting, following, or logging a workout.
+- Motion can accent hover and progress. It must not sit between the user and the next exercise.
+- Log and schedule views stay scannable. The active workout stays a card.
+- Keep saved logs and preferences working across UI changes.
+- Errors say what failed, why, and the next tap. Pair keyboard use with any dense list.

@@ -12,7 +12,7 @@
     ".github/ai-implement-context.md": {
       "title": "# Wellness with Bre — Implementation Agent Context",
       "includeAgentGuide": true,
-      "rules": ["architecture-rules", "testing-rules", "commit-rules"],
+      "rules": ["product-rules", "architecture-rules", "testing-rules", "commit-rules"],
       "tail": "implement-tail.md"
     }
   }
