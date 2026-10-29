@@ -1,0 +1,44 @@
+@media (min-width: 720px) {
+  body {
+    background: #e3b9bc !important;
+  }
+
+  header.fixed,
+  nav.fixed {
+    width: min(100%, 32rem) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+
+  main {
+    width: min(100%, 32rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 0 0 1px rgba(128, 71, 94, 0.12);
+  }
+
+  .sheet-panel {
+    width: min(100%, 32rem);
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+}
+
+#chapter-row:not(.hidden) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chapter-chip {
+  max-width: 100%;
+}
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

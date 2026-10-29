@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Coach - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-background": "#80475e", "surface-variant": "#d1abad", "inverse-primary": "#e3b9bc", error: "#ba1a1a", "surface-container-high": "#ead6d8", primary: "#80475e", "on-tertiary": "#80475e", "inverse-surface": "#80475e", "secondary-fixed": "#e3b9bc", "primary-fixed": "#e3b9bc", "on-primary-fixed": "#80475e", secondary: "#80475e", "secondary-fixed-dim": "#d1abad", "primary-container": "#c97194", "on-error-container": "#93000a", "surface-container-low": "#f7f1f1", "surface-bright": "#fffdfd", "on-tertiary-fixed": "#80475e", "error-container": "#ffdad6", "surface-container": "#f3e8e9", surface: "#fbf6f6", "primary-fixed-dim": "#d1abad", "on-primary-fixed-variant": "#80475e", "on-secondary-fixed-variant": "#80475e", "on-secondary-fixed": "#80475e", "surface-container-highest": "#e3b9bc", "on-tertiary-fixed-variant": "#80475e", "on-primary-container": "#ffffff", "outline-variant": "#e3b9bc", "on-secondary": "#ffffff", "on-secondary-container": "#80475e", "tertiary-fixed": "#e3b9bc", "inverse-on-surface": "#fbf6f6", "surface-tint": "#c97194", "surface-container-lowest": "#ffffff", outline: "#bfa4a4", tertiary: "#bfa4a4", "on-tertiary-container": "#80475e", "on-surface-variant": "#80475e", "tertiary-fixed-dim": "#d1abad", "on-error": "#ffffff", "on-surface": "#80475e", "on-primary": "#ffffff", "secondary-container": "#e3b9bc", "surface-dim": "#bfa4a4", "tertiary-container": "#d1abad", background: "#fbf6f6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "48px", sm: "16px", gutter: "16px", md: "24px", lg: "40px", xl: "64px", "margin-mobile": "20px", base: "4px", xs: "8px"}, fontFamily: {"label-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Oswald"], "headline-lg-mobile": ["Oswald"], "headline-lg": ["Oswald"], "body-md": ["Inter"], "headline-md": ["Oswald"], headline: ["Oswald"], display: ["Oswald"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}]}}}};</script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Custom scrollbar for weekly schedule */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-16 pb-24 md:pb-0 font-body-md text-body-md overflow-x-hidden">
+<!-- Desktop Navigation Drawer (Hidden on Mobile) -->
+<div class="hidden md:flex flex-col h-screen w-80 rounded-r-xl bg-surface-container-low border-r border-outline-variant/10 shadow-xl fixed top-0 left-0 z-40 p-md">
+<div class="flex items-center gap-4 mb-xl mt-4">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-primary-fixed" data-alt="A striking portrait of a highly muscular athlete with intense focus, bathed in moody cinematic lighting. High contrast with deep black shadows and a vibrant electric lime rim light highlighting their jawline and shoulders. The mood is powerful and determined, consistent with a premium fitness coaching brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJJKky5xoIWjK99QNgCsKuO4fgL0cz0NTlcDGU5VmLmtIJ66RHpl3q1wm7sI4tzskjl5Ltq5_uLQo7mhtMeOjz91_J1abhPaTG2vapdh-M_5OH87dy7i9TDFQw6xHyKrcoFrMgO7peCcvGvZnFrLc8DCYExzIx76FURKCpm9QU_kGCCyFr2EjYct718q8FU827drYYKohHsw_gA2EAo_zsk5qGTlFM30TzlFRK2MglOd00H1rdybxTNA"/>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary-fixed">Alex Rivers</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Elite Member • Level 42</span>
+</div>
+</div>
+<nav class="flex flex-col gap-sm flex-1">
+<a class="flex items-center gap-md px-4 py-3 bg-primary-container text-on-primary-container font-bold rounded-lg group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="font-label-md text-label-md">My Programs</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">History</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all rounded-lg mt-auto" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+<!-- Top App Bar (Mobile & Tablet) -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-surface border-b border-surface-variant/30 flex justify-between items-center px-margin-mobile h-16 shadow-none">
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-display-lg text-display-lg font-bold tracking-tighter text-primary-fixed uppercase text-[24px] leading-tight">ELITE COACH</span>
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A striking portrait of a highly muscular athlete with intense focus, bathed in moody cinematic lighting. High contrast with deep black shadows and a vibrant electric lime rim light highlighting their jawline and shoulders. The mood is powerful and determined, consistent with a premium fitness coaching brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDujD854oeLBov2jbUmxxPjDAHR5II0YQQzJoIJLnMqjBtc9y88UAB6gdrgdqc5-0-Fvs-ACkDajxiF0z8QkCkRkEXC1rk21mU-ybrBBl10xvMU7uv8JV5o41dQpM_PKUtmZynEwKMONerzCm5pKx4uDev1-Um1IwUXSnszrhZzec3dXNIC4zz2SdEY_rCFDdGf73UzaM3RYKLv2BgKBsqP_4lMPaYfiJYUndMKCgRbfjb3rcntxBzzjg"/>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-80 px-margin-mobile md:px-margin-desktop py-lg max-w-[1440px] mx-auto w-full grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Welcome Message -->
+<div class="col-span-4 md:col-span-12 mb-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Ready to crush it, Alex?</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Week 4, Day 3 of Elite Transformation</p>
+</div>
+<!-- Today's Workout Hero (Bento Style) -->
+<section class="col-span-4 md:col-span-8 flex flex-col gap-sm relative group cursor-pointer active:scale-[0.99] transition-transform">
+<!-- Glow Effect behind card -->
+<div class="absolute -inset-0.5 bg-gradient-to-br from-primary-fixed/30 to-surface-container rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+<div class="relative bg-surface-variant rounded-xl overflow-hidden flex flex-col h-full border-l-[3px] border-primary-fixed shadow-lg">
+<!-- Video Thumbnail Area -->
+<div class="relative w-full aspect-video bg-surface-container-lowest">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Get It In, Fit It In // Session #6" src="https://i.ytimg.com/vi/NwLK-FMQryE/maxresdefault.jpg"/>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<!-- Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center text-on-primary-fixed shadow-[0_0_20px_rgba(195,244,0,0.4)] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- Tags -->
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface/80 backdrop-blur text-primary-fixed font-label-sm text-label-sm px-2 py-1 rounded">HIIT</span>
+<span class="bg-surface/80 backdrop-blur text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">20 Min</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-md flex flex-col flex-1 justify-between bg-surface-container-highest">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-2 group-hover:text-primary-fixed transition-colors">Get It In, Fit It In</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Session #6 with Wellness With Bre. Playback starts at 8:22.</p>
+</div>
+<button class="mt-md w-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md py-3 rounded-lg uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors shadow-[0_0_15px_rgba(195,244,0,0.2)]">
+                        Start Workout
+                    </button>
+</div>
+</div>
+</section>
+<!-- Right Column (Desktop) / Bottom Content (Mobile) -->
+<div class="col-span-4 md:col-span-4 flex flex-col gap-gutter">
+<!-- Progress / Stats Mini Bento -->
+<div class="bg-surface-container rounded-xl p-md shadow-lg border border-surface-variant/50">
+<div class="flex justify-between items-center mb-sm">
+<h3 class="font-label-md text-label-md text-on-surface uppercase">Weekly Goal</h3>
+<span class="font-label-md text-label-md text-primary-fixed">3/5 Workouts</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden mb-4">
+<div class="h-full bg-primary-fixed w-[60%] rounded-full relative overflow-hidden">
+<!-- Striped animation effect purely with CSS -->
+<div class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(0,0,0,0.1)_10px,rgba(0,0,0,0.1)_20px)]"></div>
+</div>
+</div>
+<div class="flex justify-between mt-sm text-center border-t border-surface-variant/30 pt-sm">
+<div>
+<span class="block font-headline-md text-headline-md text-on-surface">1.2k</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Active Cals</span>
+</div>
+<div class="w-px bg-surface-variant/50"></div>
+<div>
+<span class="block font-headline-md text-headline-md text-on-surface">140</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Avg BPM</span>
+</div>
+</div>
+</div>
+<!-- Next Up Preview -->
+<div class="bg-surface-container rounded-xl p-md shadow-lg border border-surface-variant/50 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">event_upcoming</span>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider">Tomorrow's Grind</h3>
+</div>
+<div class="flex gap-4 items-center group cursor-pointer">
+<div class="w-20 h-20 rounded-lg overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up, high-contrast shot of a heavy kettlebell resting on a black rubber gym floor. Dark, moody lighting with a sharp, vibrant electric lime highlight outlining the edge of the kettlebell. The atmosphere is gritty, industrial, and focused on heavy lifting and strength training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_PdkSxAgi93HejZXRRF04ENyTBOnooM3aB-5YIovSc3gDWmbMkLMQP4Khqm1wrO6-zj45FL2TiHh8Sqm002w8RKVkhpOFJzsQ06i2klIUylznLqGpZDiimkrLzV8dpm2Lf1qKJ5esAO8vC3ORgv-YP0o3p9Rezhc21VX2flZ13kACL-PjI5yGXMMVh4lIiut5Z-EKcwW1mBVJypesVt5XszabqfoJfjzG3GtSgfPay5NMXHWhbFJafw"/>
+<div class="absolute inset-0 bg-background/30 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary-fixed transition-colors">Heavy Kettlebell Core</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Strength • 45 Min</p>
+</div>
+<span class="material-symbols-outlined text-surface-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Weekly Schedule Horizontal Scroll -->
+<section class="col-span-4 md:col-span-12 mt-md">
+<div class="flex justify-between items-end mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">This Week</h3>
+<button class="font-label-sm text-label-sm text-primary-fixed hover:text-primary-fixed-dim transition-colors">View All</button>
+</div>
+<div class="flex gap-sm overflow-x-auto hide-scrollbar pb-4 snap-x">
+<!-- Completed Day -->
+<div class="flex flex-col items-center gap-2 min-w-[72px] snap-start opacity-70">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mon</span>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-surface-variant flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Completed Day -->
+<div class="flex flex-col items-center gap-2 min-w-[72px] snap-start opacity-70">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tue</span>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-surface-variant flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Active Day (Today) -->
+<div class="flex flex-col items-center gap-2 min-w-[72px] snap-start">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase font-bold">Wed</span>
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_15px_rgba(195,244,0,0.3)] border-2 border-primary-fixed scale-110">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+</div>
+<!-- Rest Day -->
+<div class="flex flex-col items-center gap-2 min-w-[72px] snap-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Thu</span>
+<div class="w-12 h-12 rounded-full bg-surface-container border border-surface-variant border-dashed flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">self_improvement</span>
+</div>
+</div>
+<!-- Upcoming Day -->
+<div class="flex flex-col items-center gap-2 min-w-[72px] snap-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Fri</span>
+<div class="w-12 h-12 rounded-full bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface">
+<span class="font-label-sm text-label-sm">45m</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 h-20 bg-surface-container border-t border-surface-variant/20 shadow-lg flex justify-around items-center px-4 pb-2">
+<!-- Active Nav Item -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</a>
+<!-- Inactive Nav Items -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-sm text-label-sm mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Player</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">insert_chart</span>
+<span class="font-label-sm text-label-sm mt-1">Progress</span>
+</a>
+</nav>
+</body></html>

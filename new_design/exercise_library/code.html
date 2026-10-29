@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Coach - Program Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-background": "#80475e", "surface-variant": "#d1abad", "inverse-primary": "#e3b9bc", error: "#ba1a1a", "surface-container-high": "#ead6d8", primary: "#80475e", "on-tertiary": "#80475e", "inverse-surface": "#80475e", "secondary-fixed": "#e3b9bc", "primary-fixed": "#e3b9bc", "on-primary-fixed": "#80475e", secondary: "#80475e", "secondary-fixed-dim": "#d1abad", "primary-container": "#c97194", "on-error-container": "#93000a", "surface-container-low": "#f7f1f1", "surface-bright": "#fffdfd", "on-tertiary-fixed": "#80475e", "error-container": "#ffdad6", "surface-container": "#f3e8e9", surface: "#fbf6f6", "primary-fixed-dim": "#d1abad", "on-primary-fixed-variant": "#80475e", "on-secondary-fixed-variant": "#80475e", "on-secondary-fixed": "#80475e", "surface-container-highest": "#e3b9bc", "on-tertiary-fixed-variant": "#80475e", "on-primary-container": "#ffffff", "outline-variant": "#e3b9bc", "on-secondary": "#ffffff", "on-secondary-container": "#80475e", "tertiary-fixed": "#e3b9bc", "inverse-on-surface": "#fbf6f6", "surface-tint": "#c97194", "surface-container-lowest": "#ffffff", outline: "#bfa4a4", tertiary: "#bfa4a4", "on-tertiary-container": "#80475e", "on-surface-variant": "#80475e", "tertiary-fixed-dim": "#d1abad", "on-error": "#ffffff", "on-surface": "#80475e", "on-primary": "#ffffff", "secondary-container": "#e3b9bc", "surface-dim": "#bfa4a4", "tertiary-container": "#d1abad", background: "#fbf6f6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "48px", sm: "16px", gutter: "16px", md: "24px", lg: "40px", xl: "64px", "margin-mobile": "20px", base: "4px", xs: "8px"}, fontFamily: {"label-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Oswald"], "headline-lg-mobile": ["Oswald"], "headline-lg": ["Oswald"], "body-md": ["Inter"], "headline-md": ["Oswald"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}]}}}};</script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pt-16 pb-20 md:pb-0 md:flex-row">
+<!-- TopAppBar Mobile -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface border-b border-surface-variant/30 flex justify-between items-center px-margin-mobile h-16 md:hidden shadow-none">
+<button class="text-primary-container dark:text-primary-container active:scale-95 transition-transform duration-150 p-2 -ml-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-[24px] font-bold tracking-tighter text-primary-fixed dark:text-primary-fixed">ELITE COACH</h1>
+<div class="h-8 w-8 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A close up portrait of an athletic fitness trainer with a serious expression. Dark studio lighting with high contrast and a subtle green rim light. Corporate modern high-energy fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWXoSQxkx3fGKf5BuffXDK50w51K_swb1CnBKM85DP0wus_JlowVMn_X3viru6Hq8E8bQSct--2jhYKXDJspCQOdhwG8a68dsTP4_O5pon7fN3l8QyPDSNRAMYo99TNUvCZXAQXHokbv9Xq0EnJl_tWi-5Fl1OuMHjrXZJJFVXuK3RL18rqtMkISXb5lsLtoxFAUx0CSDc0uSITlPGVZiCsCm8KDojKrsDNPM1FwS-DXxXkhZPno1Duw"/>
+</div>
+</header>
+<!-- SideNav Desktop -->
+<aside class="hidden md:flex h-full w-80 rounded-r-xl bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant/10 shadow-xl flex-col p-md fixed top-0 left-0 z-40">
+<div class="mb-xl flex items-center space-x-4">
+<div class="h-12 w-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A close up portrait of an athletic fitness trainer with a serious expression. Dark studio lighting with high contrast and a subtle green rim light. Corporate modern high-energy fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu5GN7ILM9T8Ob5xRlJvTdbMrS5BZJKoYVIWYnvXSR1wMouAxSGsfJofA-39LAy0axGx0pSIMYnjXEV_7E2H95FooEeFz6kF_tgIqJ-uBXY5Q75xyANJy7bZEbfBMljEIHXC0wOnaiTlzOHeZqEzy8COcAwRQfklr0_0YNOJK5rurj0z3mq7yxZnrkpE5jVzKeNBlcNr3i7sniu1e27pJn-6z8dTaHMkzBRocVhb82WZjD8UHWXTNBvQ"/>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary-fixed dark:text-primary-fixed">Alex Rivers</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Elite Member • Level 42</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 p-3 bg-primary-container text-on-primary-container font-bold rounded-lg hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-md text-label-md">Library</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-label-md text-label-md">Player</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="insert_chart">insert_chart</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-surface-variant/30 space-y-2">
+<a class="flex items-center space-x-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 hover:bg-surface-container-highest transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile md:px-margin-desktop py-md md:py-xl md:ml-80">
+<!-- Header & Search -->
+<div class="mb-xl">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-fixed mb-sm">Program Library</h2>
+<div class="flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-high border border-outline-variant/50 rounded-full py-3 pl-10 pr-4 text-on-surface font-body-md text-body-md focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-colors" placeholder="Search programs, creators..." type="text"/>
+</div>
+<button class="w-full md:w-auto flex items-center justify-center space-x-2 border border-outline-variant/50 rounded-full py-3 px-6 text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="font-label-md text-label-md">Filters</span>
+</button>
+</div>
+</div>
+<!-- Categories (Pills) -->
+<div class="mb-xl overflow-x-auto hide-scrollbar pb-2">
+<div class="flex space-x-3 min-w-max">
+<button class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-6 py-2 rounded-full hover:bg-primary-fixed-dim transition-colors shadow-[0_0_10px_rgba(195,244,0,0.2)]">All</button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant/30 hover:border-primary-fixed hover:text-primary-fixed transition-colors">HIIT</button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant/30 hover:border-primary-fixed hover:text-primary-fixed transition-colors">Strength</button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant/30 hover:border-primary-fixed hover:text-primary-fixed transition-colors">Yoga</button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant/30 hover:border-primary-fixed hover:text-primary-fixed transition-colors">Mobility</button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-6 py-2 rounded-full border border-outline-variant/30 hover:border-primary-fixed hover:text-primary-fixed transition-colors">Cardio</button>
+</div>
+</div>
+<!-- Program Grid (Bento style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary-fixed/50 transition-all duration-300 group">
+<div class="relative aspect-video w-full">
+<img class="w-full h-full object-cover" data-alt="A dynamic action shot of a male athlete performing a heavy deadlift in a gritty, high-end gym. Deep slate gray surroundings with an intense electric lime spot light hitting the subject. Corporate modern high-energy fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOBi71U3B7CtgO_3q6tIM6aewtOsvUxOKw_nlhuOskBAvb9MXGsRtH7DwKJO8DHKKrwKJuj1tWpdSrZGNhIIHjilzBO0ciCPuEkgLPhWmflDQFqOzvo55ItDeJDVR5P3WVUgk5eEBv1miSid2_6hiATS8zoa8RgnU5RxinmbOmXAZHlrtshDk381YK2PwIzGJACWqD4v25ciu1qKNy9vNn4aYysnSqPKwj_gBRZRaTXSR0cnBzdqlHSg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-sm px-2 py-1 rounded text-primary-fixed font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>45 Min</span>
+</div>
+<div class="absolute top-3 left-3 bg-error px-2 py-1 rounded text-on-error font-label-sm text-label-sm flex items-center space-x-1 shadow-[0_0_8px_rgba(255,180,171,0.5)]">
+<span class="material-symbols-outlined text-[16px]" data-icon="local_fire_department">local_fire_department</span>
+<span>Advanced</span>
+</div>
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-fixed/90 text-on-primary-fixed p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-300 shadow-[0_0_15px_rgba(195,244,0,0.5)]">
+<span class="material-symbols-outlined text-[28px]" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-[20px] text-on-surface mb-1">Titan Strength Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">By Marcus Thorne</p>
+<div class="w-full bg-surface-variant rounded-full h-2 mb-2">
+<div class="bg-primary-fixed h-2 rounded-full" style="width: 25%"></div>
+</div>
+<p class="font-label-sm text-label-sm text-primary-fixed text-right">25% Completed</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary-fixed/50 transition-all duration-300 group">
+<div class="relative aspect-video w-full">
+<img class="w-full h-full object-cover" data-alt="A low angle shot of a female athlete mid-jump during a high intensity interval training session. Dark background with sharp, contrasting lighting and electric lime accents. Corporate modern high-energy fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVIYhoPmCb4W103smqsTcL8U3KLQOF2pEhgii1Af2vL-GpSgG5FoiGdRqJsxB5ib0W333NCC-xsfsP9mFdiiCz-zWNzwyKB5tJf2JOKaaBIX40qA9CC9OJ3qlkEH3E3KiBBcVBMSYlbhsbjGknRAr1Vj6vg-l1TI2S63k0E86cSuASsZDem6A2FqYzL4HCjOaPTaHN6OuuV0LzkPU9SMD7pELdZJlpDJdoCQEWiTbrGtPF1Ow5hvYWzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-sm px-2 py-1 rounded text-primary-fixed font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>30 Min</span>
+</div>
+<div class="absolute top-3 left-3 bg-primary-container px-2 py-1 rounded text-on-primary-container font-label-sm text-label-sm flex items-center space-x-1">
+<span>Intermediate</span>
+</div>
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-fixed/90 text-on-primary-fixed p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-300 shadow-[0_0_15px_rgba(195,244,0,0.5)]">
+<span class="material-symbols-outlined text-[28px]" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-[20px] text-on-surface mb-1">Velocity HIIT Shred</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">By Sarah Jenkins</p>
+<button class="w-full border border-primary-fixed text-primary-fixed hover:bg-primary-fixed hover:text-on-primary-fixed font-label-md text-label-md py-2 rounded-lg transition-colors">Start Program</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant/20 hover:border-primary-fixed/50 transition-all duration-300 group">
+<div class="relative aspect-video w-full">
+<img class="w-full h-full object-cover" data-alt="A calm but intense shot of an athlete holding a complex mobility pose in a dimly lit, premium studio. Deep charcoal background with soft, focused white and subtle lime lighting. Corporate modern high-energy fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxbrnGmUFCkCXQuY05c1MOJOpb0gOSiqs4PCuLuqBtbyxFijaLk2G4fsEkgZptvoPBbedcEhU9uhbolNuQ8iBpMK61zz9lnKLxA8G61iL5fNSsOKOWXGUanOJSZe-cAj8oU7Sk3AynvTmjDAPpkeEG0tLmyGg-MOV8fab6jkxGiGvzhBvg7xSJYWUYE07tJUaaFrPPGLbZWi4EzVKjhLlQaRb_AYOPeKEeBXaxvSM9tzyvZoSQqxAzXA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-sm px-2 py-1 rounded text-primary-fixed font-label-sm text-label-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span>20 Min</span>
+</div>
+<div class="absolute top-3 left-3 bg-surface-variant px-2 py-1 rounded text-on-surface font-label-sm text-label-sm flex items-center space-x-1">
+<span>Beginner</span>
+</div>
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-fixed/90 text-on-primary-fixed p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-300 shadow-[0_0_15px_rgba(195,244,0,0.5)]">
+<span class="material-symbols-outlined text-[28px]" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-[20px] text-on-surface mb-1">Dynamic Recovery Flow</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">By Elena Vance</p>
+<div class="w-full bg-surface-variant rounded-full h-2 mb-2">
+<div class="bg-primary-fixed h-2 rounded-full" style="width: 80%"></div>
+</div>
+<p class="font-label-sm text-label-sm text-primary-fixed text-right">80% Completed</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Mobile -->
+<nav class="fixed bottom-0 w-full z-50 h-20 bg-surface-container dark:bg-surface-container border-t border-surface-variant/20 shadow-lg flex justify-around items-center px-4 pb-2 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-sm text-label-sm mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Player</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors active:scale-90 transition-transform w-16" href="#">
+<span class="material-symbols-outlined" data-icon="insert_chart">insert_chart</span>
+<span class="font-label-sm text-label-sm mt-1">Progress</span>
+</a>
+</nav>
+</body></html>

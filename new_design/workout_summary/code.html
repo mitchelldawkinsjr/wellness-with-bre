@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Coach - Workout Complete</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Oswald (Display/Headline) & Inter (Body/Label) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-background": "#80475e", "surface-variant": "#d1abad", "inverse-primary": "#e3b9bc", error: "#ba1a1a", "surface-container-high": "#ead6d8", primary: "#80475e", "on-tertiary": "#80475e", "inverse-surface": "#80475e", "secondary-fixed": "#e3b9bc", "primary-fixed": "#e3b9bc", "on-primary-fixed": "#80475e", secondary: "#80475e", "secondary-fixed-dim": "#d1abad", "primary-container": "#c97194", "on-error-container": "#93000a", "surface-container-low": "#f7f1f1", "surface-bright": "#fffdfd", "on-tertiary-fixed": "#80475e", "error-container": "#ffdad6", "surface-container": "#f3e8e9", surface: "#fbf6f6", "primary-fixed-dim": "#d1abad", "on-primary-fixed-variant": "#80475e", "on-secondary-fixed-variant": "#80475e", "on-secondary-fixed": "#80475e", "surface-container-highest": "#e3b9bc", "on-tertiary-fixed-variant": "#80475e", "on-primary-container": "#ffffff", "outline-variant": "#e3b9bc", "on-secondary": "#ffffff", "on-secondary-container": "#80475e", "tertiary-fixed": "#e3b9bc", "inverse-on-surface": "#fbf6f6", "surface-tint": "#c97194", "surface-container-lowest": "#ffffff", outline: "#bfa4a4", tertiary: "#bfa4a4", "on-tertiary-container": "#80475e", "on-surface-variant": "#80475e", "tertiary-fixed-dim": "#d1abad", "on-error": "#ffffff", "on-surface": "#80475e", "on-primary": "#ffffff", "secondary-container": "#e3b9bc", "surface-dim": "#bfa4a4", "tertiary-container": "#d1abad", background: "#fbf6f6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "48px", sm: "16px", gutter: "16px", md: "24px", lg: "40px", xl: "64px", "margin-mobile": "20px", base: "4px", xs: "8px"}, fontFamily: {"label-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Oswald"], "headline-lg-mobile": ["Oswald"], "headline-lg": ["Oswald"], "body-md": ["Inter"], "headline-md": ["Oswald"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}]}}}};</script>
+<style>
+        /* Custom Animations & Styles */
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(195, 244, 0, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(195, 244, 0, 0.5); }
+        }
+        .animate-slide-up {
+            animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #273647; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c3f400; }
+        
+        /* Grid Lines overlay for that tech-sports feel */
+        .tech-grid {
+            background-image: 
+                linear-gradient(to right, rgba(39, 54, 71, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(39, 54, 71, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed tech-grid">
+<!-- 
+        NOTE: TopAppBar and BottomNavBar are suppressed per the rule:
+        "Automatic Suppression: You MUST exclude the navigation shell if the page intent is: Linear/Transactional: Login, Sign-up, Onboarding, Checkout, or 'Success/Confirmation' splash screens."
+        This is a post-workout confirmation screen.
+    -->
+<main class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl pb-32">
+<!-- Congratulatory Hero Section -->
+<header class="flex flex-col items-center justify-center text-center mb-xl animate-slide-up relative z-10">
+<!-- decorative background glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-fixed/20 rounded-full blur-[100px] -z-10"></div>
+<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary-fixed flex items-center justify-center mb-sm shadow-[0_0_30px_rgba(195,244,0,0.3)]">
+<span class="material-symbols-outlined text-[48px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary-fixed uppercase tracking-tighter mb-base">Workout Complete!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">You crushed <span class="text-on-background font-semibold">"Elite Core &amp; Conditioning"</span></p>
+</header>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-sm md:gap-md mb-xl animate-slide-up delay-100">
+<!-- Time -->
+<div class="bg-surface-container-highest rounded-xl p-md flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-fixed scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+<span class="material-symbols-outlined text-on-surface-variant mb-xs">timer</span>
+<p class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-bold">45:20</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-base">Total Time</p>
+</div>
+<!-- Calories -->
+<div class="bg-surface-container-highest rounded-xl p-md flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-fixed scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+<span class="material-symbols-outlined text-on-surface-variant mb-xs">local_fire_department</span>
+<p class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-bold">512</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-base">Kcal Burned</p>
+</div>
+<!-- Heart Rate (Spans 2 cols on mobile, 1 on desktop) -->
+<div class="bg-surface-container-highest rounded-xl p-md flex flex-col items-center justify-center col-span-2 md:col-span-1 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-fixed scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+<span class="material-symbols-outlined text-primary-fixed mb-xs animate-pulse">favorite</span>
+<p class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-bold">148 <span class="font-body-md text-body-md text-on-surface-variant">bpm</span></p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-base">Avg Heart Rate</p>
+</div>
+</section>
+<!-- Two Column Layout for wider screens -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Exercise Checklist -->
+<section class="lg:col-span-7 animate-slide-up delay-200">
+<h2 class="font-headline-md text-headline-md mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-fixed">checklist</span>
+                    Session Breakdown
+                </h2>
+<div class="flex flex-col gap-xs">
+<!-- Item 1 -->
+<div class="bg-surface-container-low border border-surface-variant/50 rounded-lg p-sm flex items-center justify-between hover:border-primary-fixed/50 transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-on-background">Kettlebell Swings</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Warmup</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-mono text-on-surface-variant">3 x 15</p>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low border border-surface-variant/50 rounded-lg p-sm flex items-center justify-between hover:border-primary-fixed/50 transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-on-background">Barbell Thrusters</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Power Phase</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-mono text-on-surface-variant">4 x 8</p>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low border border-surface-variant/50 rounded-lg p-sm flex items-center justify-between hover:border-primary-fixed/50 transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-on-background">Box Jumps</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Explosive Phase</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-mono text-on-surface-variant">4 x 10</p>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-low border border-surface-variant/50 rounded-lg p-sm flex items-center justify-between hover:border-primary-fixed/50 transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-md text-label-md text-on-background">Assault Bike Sprint</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Finisher</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-mono text-on-surface-variant">1 x 5m</p>
+</div>
+</div>
+</section>
+<!-- Actions & Engagement -->
+<section class="lg:col-span-5 flex flex-col gap-md animate-slide-up delay-300">
+<!-- Rating Card -->
+<div class="bg-surface-container-high border-l-2 border-primary-fixed rounded-xl p-md">
+<h3 class="font-label-md text-label-md mb-sm text-on-background">Rate Your Intensity</h3>
+<div class="flex items-center justify-between px-sm" id="rating-container">
+<button class="rating-btn text-surface-variant hover:text-primary-fixed transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</button>
+<button class="rating-btn text-surface-variant hover:text-primary-fixed transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</button>
+<button class="rating-btn text-surface-variant hover:text-primary-fixed transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</button>
+<button class="rating-btn text-surface-variant hover:text-primary-fixed transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</button>
+<button class="rating-btn text-surface-variant hover:text-primary-fixed transition-colors focus:outline-none">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-sm hidden" id="rating-feedback">Intensity recorded. Great push!</p>
+</div>
+<!-- Integrations & Sharing -->
+<div class="bg-surface-container rounded-xl p-md flex flex-col gap-sm border border-outline-variant/30">
+<!-- Health Sync Toggle -->
+<div class="flex items-center justify-between py-xs border-b border-surface-variant/50 mb-xs">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-background text-[18px]">health_and_safety</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Sync to Health Apps</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Apple Health / Google Fit</p>
+</div>
+</div>
+<!-- Custom Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-fixed"></div>
+</label>
+</div>
+<!-- Share Button -->
+<button class="w-full flex items-center justify-center gap-sm py-3 rounded-lg border border-surface-variant text-on-background hover:border-primary-fixed hover:text-primary-fixed transition-all group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">share</span>
+<span class="font-label-md text-label-md">Share to Social</span>
+</button>
+</div>
+<!-- Primary Action -->
+<div class="mt-auto pt-md">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md py-4 rounded-full uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-sm shadow-[0_0_20px_rgba(195,244,0,0.2)] hover:shadow-[0_0_30px_rgba(195,244,0,0.4)]">
+                        Go to Dashboard
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<script>
+        // Simple rating interaction logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btns = document.querySelectorAll('.rating-btn');
+            const feedback = document.getElementById('rating-feedback');
+            
+            btns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    // Reset all
+                    btns.forEach(b => {
+                        b.classList.remove('text-primary-fixed');
+                        b.classList.add('text-surface-variant');
+                        b.querySelector('span').style.fontVariationSettings = "'FILL' 0";
+                    });
+                    
+                    // Fill up to clicked
+                    for(let i = 0; i <= index; i++) {
+                        btns[i].classList.remove('text-surface-variant');
+                        btns[i].classList.add('text-primary-fixed');
+                        btns[i].querySelector('span').style.fontVariationSettings = "'FILL' 1";
+                    }
+                    
+                    // Show feedback
+                    feedback.classList.remove('hidden');
+                    feedback.classList.add('animate-slide-up');
+                });
+            });
+        });
+    </script>
+</body></html>
