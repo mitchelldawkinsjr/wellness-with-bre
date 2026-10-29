@@ -4,7 +4,7 @@ Push to `main` runs `.github/workflows/deploy-vps.yml`. Markdown-only pushes do 
 
 Public site: https://wellness.360web.cloud
 Container: wellness-with-bre-app
-Loopback on the VPS: 127.0.0.1:8033
+Loopback on the VPS: 127.0.0.1:8034
 VPS directory: /opt/360ws/clients/docker-app/wellness-with-bre/
 Proxy forwards to http://wellness-with-bre-app:80 on Docker network `360ws-network`.
 
