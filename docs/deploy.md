@@ -8,6 +8,6 @@ Loopback on the VPS: 127.0.0.1:8034
 VPS directory: /opt/360ws/clients/docker-app/wellness-with-bre/
 Proxy forwards to http://wellness-with-bre-app:80 on Docker network `360ws-network`.
 
-After `up`: none.
+After `up`: none. The container serves `new_design/` (`/` is `today/code.html`).
 
 Secrets (GitHub Actions, same values as little-sprouts): `VPS_HOST`, `VPS_USER`, `VPS_SSH_KEY`. Optional: `VPS_SSH_PORT`, `SLACK_WEBHOOK`.

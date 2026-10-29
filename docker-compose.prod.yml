@@ -1,4 +1,4 @@
-# Production stack (VPS): static site served by nginx.
+# Production stack (VPS): new UI served by new_design/server.mjs on port 80.
 # Joins 360ws-network so Nginx Proxy Manager can reach wellness-with-bre-app:80.
 # Public host: https://wellness.360web.cloud
 # Loopback health check: 127.0.0.1:8034
