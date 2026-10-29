@@ -2,4 +2,9 @@ node_modules/
 .DS_Store
 *.log
 .tmp/
-artifacts/
+dist/
+test-results/
+playwright-report/
+artifacts/*
+!artifacts/issue-*/
+!artifacts/issue-*/****
