@@ -1,0 +1,30 @@
+# Production stack (VPS): static site served by nginx.
+# Joins 360ws-network so Nginx Proxy Manager can reach wellness-with-bre-app:80.
+# Public host: https://wellness.360web.cloud
+# Loopback health check: 127.0.0.1:8033
+
+name: wellness-with-bre
+
+services:
+  app:
+    build: .
+    container_name: wellness-with-bre-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${APP_PUBLISH_PORT:-8033}:80"
+    networks:
+      - proxy
+    labels:
+      - "com.360ws.type=docker-app"
+      - "com.360ws.app=wellness-with-bre"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  proxy:
+    external: true
+    name: 360ws-network

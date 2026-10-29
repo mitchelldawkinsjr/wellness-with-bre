@@ -25,3 +25,5 @@ npm run dev
 ```
 
 Append `?real-youtube=1` to a workout URL to use the live YouTube iframe player instead of the built-in mock player.
+
+Production: [docs/deploy.md](docs/deploy.md).
